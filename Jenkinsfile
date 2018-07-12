@@ -6,7 +6,7 @@ node {
    //GitHub
    		git url: 'https://github.com/github0889/helloworld.git'
       stage ('Code Analysis') {
-      //Sonarqube scanner with uni tests
+      //Sonarqube scanner with unit tests
       }	
    stage 'Build Automation'
    //Maven or Ant or Gradle
@@ -16,6 +16,6 @@ node {
          
    	stage 'Deploy'
    //Tomcat or XL Deploy(less priority)
-   		sh './myDeployment.sh'
+   		bat './myDeployment.bat'
   //Notify stage with email plugin configuration and required script.
 }
