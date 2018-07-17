@@ -7,6 +7,10 @@ node {
    		git url: 'https://github.com/github0889/helloworld.git'
       stage ('Code Analysis') {
       //Sonarqube scanner with unit tests
+    def scannerHome = tool 'SonarQube Scanner 7.4';
+    withSonarQubeEnv('My SonarQube Server') {
+      bat "${SONARQUBE_HOME}bin\windows-x86-64"
+        }
       }	
       stage 'Build Automation'
       //Maven or Ant or Gradle
